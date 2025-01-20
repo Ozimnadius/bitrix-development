@@ -1,18 +1,3 @@
-## Правильный вывод компонента в компоненте.
-+ Чтобы в component_epilog.php были доступны нужные свойства используем SetResultCacheKeys. В result_modifier.php пишем:
-```php
-<? if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die();
-global $APPLICATION;
-$cp = $this->__component; // объект компонента
-if (is_object($cp)) {
-    // добавим в arResult компонента два поля - MY_TITLE и IS_OBJECT
-    $cp->arResult['PROPERTIES'] = $arResult['PROPERTIES'];
-    $cp->SetResultCacheKeys(array('PROPERTIES'));
-}
-?>
-```
-+ В component_epilog.php используем отложенные функции битрикса SetViewTarget.
-```php
 <? $this->__template->SetViewTarget('terminal_advantages'); ?>
 <? // Список новостей
 $APPLICATION->IncludeComponent("bitrix:news.list", "advantages", array(
@@ -80,9 +65,3 @@ $APPLICATION->IncludeComponent("bitrix:news.list", "advantages", array(
     false
 ); ?>
 <? $this->__template->EndViewTarget(); ?>
-```
-+ В файле template.php используем ShowViewContent.
-```php
-<? $APPLICATION->ShowViewContent('terminal_advantages'); ?>
-```
- 
