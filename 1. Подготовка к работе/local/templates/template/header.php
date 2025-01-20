@@ -20,12 +20,19 @@ $isContent = $APPLICATION->GetProperty("content_page") === 'Y';
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1" name="viewport">
     <title><? $APPLICATION->ShowTitle() ?></title>
+
     <link rel="apple-touch-icon" sizes="180x180" href="/local/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/local/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/local/favicon/favicon-16x16.png">
     <link rel="manifest" href="/local/favicon/site.webmanifest">
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
+
+    <link rel="icon" type="image/png" href="<?=SITE_TEMPLATE_PATH ?>/favicon/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="<?=SITE_TEMPLATE_PATH ?>/favicon/favicon.svg" />
+    <link rel="shortcut icon" href="<?=SITE_TEMPLATE_PATH ?>/favicon/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="<?=SITE_TEMPLATE_PATH ?>/favicon/apple-touch-icon.png" />
+    <link rel="manifest" href="<?=SITE_TEMPLATE_PATH ?>/favicon/site.webmanifest" />
 
     <?
     // CSS
@@ -49,7 +56,7 @@ $isContent = $APPLICATION->GetProperty("content_page") === 'Y';
     </div>
 
     <div class="wrapper__header">
-        <? include_once $_SERVER['DOCUMENT_ROOT'] . '/local/includes/header.php'; ?>
+        <? include_once SITE_TEMPLATE_PATH . '/page_blocks/header.php'; ?>
     </div>
 
     <!--wrapper__content-->
