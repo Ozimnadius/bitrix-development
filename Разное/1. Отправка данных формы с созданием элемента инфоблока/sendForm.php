@@ -1,23 +1,4 @@
-## Отправка данных формы с созданием элемента инфоблока.
-+ Первым делом создаем инфоблок в который будем добавлять элементы.
-+ Создаем форму, для отправки данных, если еще нет.
-
-Пример формы:
-```html
-<form action="/ajax/sendForm.php" method="post">
-    <fieldset>
-        <input type="text" name="name" required="" placeholder="*Имя">
-        <input type="text" name="company" placeholder="Название компании">
-        <input type="tel" name="tel" placeholder="Телефон">
-        <input type="email" name="email" required="" placeholder="*e-mail">
-        <textarea name="msg" rows="10" placeholder="Сообщение"></textarea>
-    </fieldset>
-    <button class="btn form__submit" type="submit">Обсудить проект</button>
-</form>
-```
-
-+ Создаем файл sendForm.php, вот с таким кодом:
-```php
+<?php
 header('Content-Type: application/json');
 require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/modules/main/include/prolog_before.php");
 
@@ -88,15 +69,3 @@ function sendMail()
 
 echo json_encode(['status' => sendMail()]);
 exit();
-```
-
-+ Можно добавить отправку jsоn
-```javascript
-fetch(elem.action, {
-            method: 'POST',
-            body: new FormData(elem)
-        }).then(response => response.json()).then((data) => {
-            console.log(this);
-            console.log(data);
-        });
-```

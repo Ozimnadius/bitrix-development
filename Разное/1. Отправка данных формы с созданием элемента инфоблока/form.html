@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script defer src="script.js"></script>
+</head>
+<body>
+<form id="form" action="sendForm.php" method="post">
+    <fieldset>
+        <input type="text" name="name" required="" placeholder="*Имя">
+        <input type="text" name="company" placeholder="Название компании">
+        <input type="tel" name="tel" placeholder="Телефон">
+        <input type="email" name="email" required="" placeholder="*e-mail">
+        <textarea name="msg" rows="10" placeholder="Сообщение"></textarea>
+    </fieldset>
+    <button class="btn form__submit" type="submit">Обсудить проект</button>
+</form>
+</body>
+</html>
