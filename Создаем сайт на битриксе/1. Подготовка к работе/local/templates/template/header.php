@@ -47,7 +47,7 @@ $isContent = $APPLICATION->GetProperty("content_page") === 'Y';
     ?>
     
 </head>
-<body class="page">
+<body>
 
 <!--wrapper-->
 <div class="wrapper">
