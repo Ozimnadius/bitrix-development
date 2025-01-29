@@ -13,6 +13,7 @@ if (is_object($cp)) {
 ```
 + В component_epilog.php используем отложенные функции битрикса SetViewTarget.
 ```php
+<? if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die();?>
 <? $this->__template->SetViewTarget('terminal_advantages'); ?>
 <? // Список новостей
 $APPLICATION->IncludeComponent("bitrix:news.list", "advantages", array(
