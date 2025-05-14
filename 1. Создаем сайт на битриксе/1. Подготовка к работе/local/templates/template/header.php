@@ -56,7 +56,7 @@ $isContent = $APPLICATION->GetProperty("content_page") === 'Y';
     </div>
 
     <div class="wrapper__header">
-        <? include_once SITE_TEMPLATE_PATH . '/page_blocks/header.php'; ?>
+        <? include_once $_SERVER['DOCUMENT_ROOT'].SITE_TEMPLATE_PATH . '/page_blocks/header.php'; ?>
     </div>
 
     <!--wrapper__content-->

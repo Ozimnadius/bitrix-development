@@ -4,7 +4,7 @@
 <!--wrapper__content END-->
 
 <div class="wrapper__footer">
-    <? include_once SITE_TEMPLATE_PATH . '/page_blocks/footer.php' ?>
+    <? include_once $_SERVER['DOCUMENT_ROOT'].SITE_TEMPLATE_PATH . '/page_blocks/footer.php' ?>
 </div>
 
 </div>
