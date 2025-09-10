@@ -3,6 +3,9 @@
 ```javascript
 class Helpers {
     static delegateEvent(root, eventName, selector, handler){
+        
+        if (!root) return;
+
         root.addEventListener(eventName, function(e){
             let el = e.target.closest(selector);
 
