@@ -1,5 +1,8 @@
 Сперва надо получить captureId и endpoint, для этого нужен сервис с подключением к Figma MCP (например Codex) и ссылка на дизайн Figma
-
+Например 
+```
+Capture https://rolapp.ru/contacts/ into existing Figma file https://www.figma.com/design/JzS2xENQbOXHXZ1AG7Mfwy/Untitled?node-id=0-1
+```
 
 Вставить в консоль captureId и endpoint подставить из предыдущего пункта
 
