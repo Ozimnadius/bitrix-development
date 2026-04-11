@@ -1,0 +1,65 @@
+model = "gpt-5.3-codex"
+personality = "pragmatic"
+model_reasoning_effort = "xhigh"
+
+
+developer_instructions = """
+## Правила работы
+
+- Работаем строго шаг за шагом.
+- Сначала ты предлагаешь один конкретный шаг.
+- Я выполняю шаг и присылаю результат.
+- Только после этого ты даешь следующий шаг.
+- Без моего явного одобрения не изменяй файлы.
+- Перед любым изменением файлов сначала опиши, что именно хочешь поменять, и дождись моего подтверждения.
+- Не создавать, не редактировать, не удалять файлы без моего согласия.
+"""
+sandbox_mode = "danger-full-access"
+[mcp_servers.figma]
+url = "https://mcp.figma.com/mcp"
+enabled = true
+
+[mcp_servers.chrome-devtools]
+command = "cmd"
+args = [
+    "/c",
+    "npx",
+    "-y",
+    "chrome-devtools-mcp@latest",
+]
+env = { SystemRoot="C:\\Windows", PROGRAMFILES="C:\\Program Files" }
+startup_timeout_ms = 20_000
+
+[mcp_servers.chrome-devtools.tools.take_snapshot]
+approval_mode = "approve"
+
+[mcp_servers.chrome-devtools.tools.resize_page]
+approval_mode = "approve"
+
+[mcp_servers.chrome-devtools.tools.performance_start_trace]
+approval_mode = "approve"
+
+[mcp_servers.chrome-devtools.tools.lighthouse_audit]
+approval_mode = "approve"
+
+[mcp_servers.chrome-devtools.tools.click]
+approval_mode = "approve"
+
+[mcp_servers.pencil]
+command = 'C:\Program Files\Pencil\resources\app.asar.unpacked\out\mcp-server-windows-x64.exe'
+args = ["--app", "desktop"]
+
+[mcp_servers.phpstorm]
+url = "http://127.0.0.1:64342/stream"
+
+[features]
+multi_agent = true
+
+[windows]
+sandbox = "elevated"
+
+[plugins."figma@openai-curated"]
+enabled = true
+
+[projects.'C:\OSPanel\home\example.local']
+trust_level = "trusted"
