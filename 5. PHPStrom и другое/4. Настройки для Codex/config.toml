@@ -63,3 +63,7 @@ enabled = true
 
 [projects.'C:\OSPanel\home\example.local']
 trust_level = "trusted"
+
+[mcp_servers.bitrix]
+command = "cmd"
+args = ["/c", "npx", "-y", "mcp-remote", "https://bxmcp.camouf.ru"]
