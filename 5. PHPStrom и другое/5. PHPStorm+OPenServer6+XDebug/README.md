@@ -10,3 +10,4 @@ xdebug.mode                            = "debug"
 xdebug.start_with_request            = "yes" 
 ```
 Перезапускаем сервер и настраиваем PhpStorm
+
