@@ -1,0 +1,18 @@
+@use "../helpers/index" as *;
+
+/* block-name */
+
+.block-name {
+  &__container {
+  }
+
+  &__title {
+    @include xs-block {
+    }
+  }
+
+  &__link {
+    @include hover {
+    }
+  }
+}

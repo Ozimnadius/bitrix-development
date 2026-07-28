@@ -1,0 +1,16 @@
+@use "../helpers/index" as *;
+
+// Единственный класс ограничения ширины в проекте.
+// Аналоги вроде page-container / content-container не заводятся.
+.container {
+  width: 100%;
+  max-width: calc(0px + var(--container-width) + var(--container-padding) * 2);
+  padding-inline: var(--container-padding);
+  margin-inline: auto;
+}
+
+a {
+  @include hover {
+    color: var(--accent);
+  }
+}

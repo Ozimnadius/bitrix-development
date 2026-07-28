@@ -1,0 +1,22 @@
+@use "media" as *;
+
+@mixin tr() {
+  transition: var(--transition);
+}
+
+// Hover только через этот миксин.
+// На устройствах без курсора вместо :hover срабатывает :active —
+// иначе состояние залипает после тапа.
+@mixin hover() {
+  @media (any-hover: hover) {
+    &:hover {
+      @content;
+    }
+  }
+
+  @media (any-hover: none) {
+    &:active {
+      @content;
+    }
+  }
+}

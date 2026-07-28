@@ -1,0 +1,23 @@
+@use "../helpers/index" as *;
+
+body {
+  background: var(--bg);
+  font-family: var(--font-text);
+  font-size: var(--font-size);
+  font-weight: var(--font-weight);
+  line-height: var(--line-height);
+  color: var(--text);
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: none;
+}
+
+// Подвал прижат к низу даже на короткой странице.
+.wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+
+  &__content {
+    flex-grow: 1;
+  }
+}
